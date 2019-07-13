@@ -6,7 +6,10 @@ import solutions from './solutions';
 export default class Game extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {};
+    this.state = {
+      board:[null, null, null, null, null, null, null, null, null],
+      turn:'X'
+    };
 
     this.handleReset = this.handleReset.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -19,14 +22,20 @@ export default class Game extends React.Component {
   }
 
   getWinner () {
+    return this.state.turn;
   }
 
   isComplete () {
+
   }
 
   render () {
     return (
       <div>
+      <Board />
+      if(this.isComplete){
+        <Status winner={this.getWinner}/>
+      }
       </div>
     );
   }
