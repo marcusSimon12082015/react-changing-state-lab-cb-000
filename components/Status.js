@@ -9,9 +9,9 @@ export default class Status extends React.Component {
     } else {
       display = winner + ' wins';
     }
-
+    let className = 'status';
     return (
-      <div style='background-color:grey;'>
+      <div className={className} style='background-color:grey;'>
         <p>{display}</p>
       </div>
     );
