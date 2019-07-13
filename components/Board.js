@@ -8,8 +8,8 @@ export default class Board extends React.Component {
     return (
       <div className={className}>
         {
-          this.props.board.map((field) =>(
-            <Field player={field} onClick={this.handleClick} />
+          this.props.board.map((field,i) =>(
+            <Field key={i} player={field} onClick={onClick.bind(null,i)} />
           ))
         }
       </div>
