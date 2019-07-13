@@ -49,7 +49,7 @@ export default class Game extends React.Component {
   }
 
   isComplete () {
-    return this.state.board.every(checkField)
+    return this.state.board.every(checkField);
   }
 
   render () {
