@@ -35,7 +35,7 @@ export default class Game extends React.Component {
     this.setState({turn:player});
   }
 
-  getWinner =() => {
+  getWinner = () => {
     solutions.some(function(combo){
       if(this.state.board[combo[0]] !== null && this.state.board[combo[0]] === this.state.board[combo[1]] && this.state.board[combo[1]] === this.state.board[combo[2]]){
         this.setState({winner:this.state.board[combo[0]]});
