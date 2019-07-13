@@ -7,7 +7,7 @@ export default class Status extends React.Component {
     if (typeof winner !== 'undefined') {
       display = 'Tie';
     } else {
-      display = winner + 'wins';
+      display = winner + ' wins';
     }
 
     return (
