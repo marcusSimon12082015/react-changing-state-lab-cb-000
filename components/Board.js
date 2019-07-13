@@ -9,7 +9,7 @@ export default class Board extends React.Component {
       <div className={className}>
         {
           this.props.board.map((field) =>(
-            (field === null) ? <Field onClick={this.onClick} /> : <Field player={field} onClick={this.onClick} />
+            (field === null) ? <Field onClick={this.handleClick} /> : <Field player={field} onClick={this.handleClick} />
           ))
         }
       </div>
