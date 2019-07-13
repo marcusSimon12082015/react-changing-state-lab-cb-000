@@ -47,7 +47,7 @@ export default class Game extends React.Component {
   checkField(field){
       return field === 'X' || field === 'O';
   }
-  
+
   isComplete () {
     return this.state.board.every(checkField)
   }
