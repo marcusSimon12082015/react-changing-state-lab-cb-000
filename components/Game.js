@@ -55,7 +55,7 @@ export default class Game extends React.Component {
     return (
       <div className={className}>
       <Board board={this.state.board} onClick={this.handleClick}/>
-      {this.isComplete && <Status winner={this.getWinner} />}
+      {this.isComplete() && <Status winner={this.getWinner} />}
       <button onClick={this.handleReset} className='game__reset'>Reset</button>
       </div>
     );
