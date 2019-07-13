@@ -44,10 +44,12 @@ export default class Game extends React.Component {
     });
   }
 
+  checkField(field){
+      return field === 'X' || field === 'O';
+  }
+  
   isComplete () {
-    if(getWinner()){
-      return this.state.turn;
-    }
+    return this.state.board.every(checkField)
   }
 
   render () {
