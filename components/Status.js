@@ -4,7 +4,7 @@ export default class Status extends React.Component {
   render () {
     const { winner } = this.props;
     let display;
-    if (typeof winner !== 'undefined') {
+    if (typeof winner === 'undefined') {
       display = 'Tie';
     } else {
       display = winner + ' wins';
